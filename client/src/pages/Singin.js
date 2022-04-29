@@ -1,68 +1,64 @@
-import { React, useRef, useState, useContext } from 'react'
-import './../css/signin.css'
-import { Container, Form, Alert } from 'react-bootstrap';
-import { Link, useNavigate, useLocation, Navigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { UserContext } from "../App";
-import firebase from "firebase/compat/app";
+import React from 'react'
+import { Link } from 'react-router-dom';
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { auth } from './firebase-config'
+import {useState } from "react";
+import '../css/signin.css';
 
 
-const Signin = () => {
+
+const Singin = () => {
   
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const { signin } = useAuth();
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-  const navigate = useNavigate();
-  const location = useLocation();
-  // navigate to another component after sign in
+  const [loginEmail, setLoginEmail] = useState("")
+  const [loginPassword, setLoginPassword] = useState("")
 
-  async function handleSubmit(e) {
-    e.preventDefault()
+  const [user, setUser] = useState("");
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  })
+
+
+  const login = async () => {
     try {
-      setError("")
-      setLoading(true)
-      await signin(emailRef.current.value, passwordRef.current.value);
-      navigate("/edit-profile")
-    } catch {
-      setError("Failed to sign in")
+      const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+      console.log(user)
+    } catch (error) {
+      console.log(error.message);
     }
+  };
 
-    setLoading(false)
-  }
-
+  const logout = async () => {
+    await signOut(auth);
+  };
   return (
-    <>
-      <div className='signin-body'>
-        <div className='blackline'></div>
-        <p className='signinTitle'>Sing In</p>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={handleSubmit}>
-          <div className="">
-            <input type="email" id="signin-email" className="signin-email"
-              placeholder='Email' ref={emailRef} required/>
-          </div>
-          <div className="">
-            <input type="password" id="signin-password" className="signin-password"
-              placeholder='Password' ref={passwordRef} required/>
-          </div>
-          <Link to='/password-recovery' className='forgot-password'>Forgot your password?</Link>
-          <div className='signin-button-div'>
-            <button type="submit" disabled={loading} className="btn btn-primary singin-button">SIGN IN</button>
-          </div>
-        </Form>
-        <Link to='/signup' className='forgot-password'>
-          Don't Have An Account Yet? Create Account</Link>
+    <div>
+      <div>
+      <hr></hr>
+      <h3 className='style-text'>Login</h3>
+      <input className='center-block' type="email" placeholder="Email..."
+        onChange={(event) => {
+          setLoginEmail(event.target.value);
+          }}
+      />
+      <br/>
+      <input className='center-block' type="password" placeholder="Password..."
+        onChange={(event) => {
+          setLoginPassword(event.target.value);
+          }}
+      />
+      <br/>
+      <button onClick={login} className= "button-style" >Login</button>
+      <br/>
+      <Link className='' to="/signup">Don't have an account yet? Register here!</Link>
       </div>
-      
-      <div className='signin-footer'>
-        <p className='intouch-text'>LET'S STAY IN TOUCH</p>
-        <input type="email" id="intouch-email" name="intouch-email"
-            className="intouch-email" placeholder='EMAIL ADDRESS' />
+      <div>
+        <h5 className='style-text' >User Logged In: </h5>
+        {user?.email}
+        <button onClick={logout} className= "button-style">Sign Out</button>
       </div>
-    </>
-    
+    </div>
   )
 }
-export default Signin
+
+export default Singin

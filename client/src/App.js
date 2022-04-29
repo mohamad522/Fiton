@@ -27,13 +27,11 @@ import AbsWorkout from './pages/AbsWorkout'
 import FatLoss from './pages/FatLoss'
 import CardioExercises from './pages/CardioExercises'
 import BalanceExercises from './pages/BalanceExercises'
-import { AuthProvider } from './contexts/AuthContext'
 
 
 const App = () => {
 
   return (
-      <AuthProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -67,7 +65,6 @@ const App = () => {
           <Route path="*" element={<NoMatch />} />
           </Route>
         </Routes>
-      </AuthProvider>
   )
 }
 

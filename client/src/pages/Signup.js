@@ -1,15 +1,15 @@
-import React from 'react'
+import { React, useState } from "react";
 import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from './firebase-config'
-import { useState } from "react";
-import '../css/signin.css';
+import { Alert } from 'react-bootstrap';
+import '../css/signup.css';
 
 const Signup = () => {
-
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const [registerEmail, setRegisterEmail] = useState("")
   const [registerPassword, setRegisterPassword] = useState("")
-
   const [user, setUser] = useState("");
 
   onAuthStateChanged(auth, (currentUser) => {
@@ -21,42 +21,57 @@ const Signup = () => {
   };
 
   const register = async () => {
+    // if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+    //   return setError("Passwords do not match")
+    // }
     try {
       const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
-      console.log(user)
+      setError("")
+      setLoading(true)
     } catch (error) {
-      console.log(error.message);
+      setError("Failed to create an account")
     }
+    setLoading(false)
   };
   return (
-    <div>
-      <div>
-        <hr></hr>
-        <h3 className='style-text'>Register User</h3>
-        <input className='center-block' type = "email"
-          placeholder="Email..." 
-          onChange={(event) => {
-            setRegisterEmail(event.target.value);
-          }}
-        />
-        <br/>
-        <input className='center-block' type = "password"
-          placeholder="Password..."
-          onChange={(event) => {
-            setRegisterPassword(event.target.value);
-          }}
-        />
-        <br/>
-        <button className='button-style' onClick={register} >Create User</button>
-        <br/>
-        <Link to="/signin">Already have an account? Sign in here!</Link>
-      </div>
-      <div>
-        <h5 className='style-text'>User Logged In: </h5>
+    <>
+    <div className='signup-body'>
+      <div className='blackline'></div>
+      <p className='signupTitle'>Sing Up</p>
+      {error && <Alert variant="danger">{error}</Alert>}
+        <div>
+          <input type="email" id="signup-email"
+            className="signup-email" placeholder='Email' onChange={(event) => {
+              setRegisterEmail(event.target.value);
+            }} required/>
+        </div>
+        <div>
+          <input type="password" id="signup-password"
+            className="signup-password" placeholder='Password'
+            onChange={(event) => {
+              setRegisterPassword(event.target.value);
+            }} required/>
+        </div>
+        <div className='signup-button-div'>
+          <button type="submit" disabled={loading} onClick={register} 
+          className="btn btn-primary singup-button">SIGN UP</button>
+        </div>
+      <Link to='/signin' className='forgot-password'>
+        Already Have An Account?</Link>
+        <div>
+        <h5 className='logged-user'>User Logged In: </h5>
         {user?.email}
-        <button className='button-style' onClick={logout} >Sign Out</button>
+        <div className='signup-button-div'>
+          <button className='btn btn-primary singup-button' onClick={logout} >SIGN OUT</button>
+        </div>
       </div>
     </div>
+    <div className='signup-footer'>
+      <p className='intouch-text'>LET'S STAY IN TOUCH</p>
+      <input type="email" id="intouch-email" name="intouch-email"
+          className="intouch-email" placeholder='EMAIL ADDRESS' />
+    </div>
+    </>
   )
 }
 

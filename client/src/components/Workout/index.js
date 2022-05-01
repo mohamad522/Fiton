@@ -4,8 +4,6 @@ import {
   CategoryTitle,
   GridContainer
 } from './WorkoutElements'
-import home21 from '../../images/home-2-1.jpg'
-import home22 from '../../images/home-2-2.jpg'
 
 const WorkoutElements = () => {
   return (

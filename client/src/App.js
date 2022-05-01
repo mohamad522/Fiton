@@ -32,39 +32,39 @@ import BalanceExercises from './pages/BalanceExercises'
 const App = () => {
 
   return (
-        <Routes>
-          <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="workouts" element={<Workouts />} />
-          <Route path="healthy-lifestyle" element={<HealthyLifestyle />} />
-          <Route path="sports-news" element={<SportsNews />} />
-          <Route path="workout-playlists" element={<WorkoutPlaylists />} />
-          <Route path="contact-us" element={<ContactUs />} />
-          <Route path="signin" element={<Signin />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="password-recovery" element={<PassRecovery />} />
-          <Route path="edit-profile" element={<EditProfile />} />
-          <Route path="favorites" element={<Favorites />} />
-          <Route path="smoothie-recipes" element={<SmoothieRecipes/>} />
-          <Route path="nutritious-breakfast" element={<NutritiousBreakfast />} />
-          <Route path="balanced-diet" element={<BalancedDiet />} />
-          <Route path="joints-harming" element={<JointsHarming />} />
-          <Route path="streching" element={<Streching />} />
-          <Route path="hiit" element={<Hiit />} />
-          <Route path="workout-songs" element={<WorkoutSongs />} />
-          <Route path="children-in-sports" element={<ChildrenInSports />} />
-          <Route path="burn-fats-treadmill" element={<BurnFatsTreadmill />} />          
-          <Route path="body-building-plan" element={<BodyBuilding />} />          
-          <Route path="abs-workout" element={<AbsWorkout />} />          
-          <Route path="fat-loss" element={<FatLoss />} />          
-          <Route path="cardio-exercises" element={<CardioExercises />} />          
-          <Route path="balance-exercises" element={<BalanceExercises />} />          
-          {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
-          <Route path="*" element={<NoMatch />} />
-          </Route>
-        </Routes>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="workouts" element={<Workouts />} />
+      <Route path="healthy-lifestyle" element={<HealthyLifestyle />} />
+      <Route path="sports-news" element={<SportsNews />} />
+      <Route path="workout-playlists" element={<WorkoutPlaylists />} />
+      <Route path="contact-us" element={<ContactUs />} />
+      <Route path="signin" element={<Signin />} />
+      <Route path="signup" element={<Signup />} />
+      <Route path="password-recovery" element={<PassRecovery />} />
+      <Route path="edit-profile" element={<EditProfile />} />
+      <Route path="favorites" element={<Favorites />} />
+      <Route path="smoothie-recipes" element={<SmoothieRecipes/>} />
+      <Route path="nutritious-breakfast" element={<NutritiousBreakfast />} />
+      <Route path="balanced-diet" element={<BalancedDiet />} />
+      <Route path="joints-harming" element={<JointsHarming />} />
+      <Route path="streching" element={<Streching />} />
+      <Route path="hiit" element={<Hiit />} />
+      <Route path="workout-songs" element={<WorkoutSongs />} />
+      <Route path="children-in-sports" element={<ChildrenInSports />} />
+      <Route path="burn-fats-treadmill" element={<BurnFatsTreadmill />} />          
+      <Route path="body-building-plan" element={<BodyBuilding />} />          
+      <Route path="abs-workout" element={<AbsWorkout />} />          
+      <Route path="fat-loss" element={<FatLoss />} />          
+      <Route path="cardio-exercises" element={<CardioExercises />} />          
+      <Route path="balance-exercises" element={<BalanceExercises />} />     
+       {/* Using path="*"" means "match anything", so this route
+             acts like a catch-all for URLs that we don't have explicit
+             routes for. */}
+       <Route path="*" element={<NoMatch />} />
+       </Route>
+     </Routes>
   )
 }
 

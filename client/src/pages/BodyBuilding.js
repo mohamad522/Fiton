@@ -33,7 +33,7 @@ const BodyBuilding = () => {
           <h1>Name: {user.name}</h1>
           <h3>{user['sets and reps']}</h3>
           <p>Explanation: {user.explication}</p>
-          <button onClick={saveWorkout}>Save</button>
+          <button>Save</button>
         </div>
       })}
     </div> 

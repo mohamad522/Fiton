@@ -1,7 +1,8 @@
 .sportsnews-bg {
-  background-image: url('../images/contactus2.png');
+  background-image: url('../images/sportsnews1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
   height: 50vw;
   width: 100%;
 }
@@ -10,11 +11,29 @@
   margin: auto;
   /* padding-top: 2em; */
   width: 600px;
-  color:black;
+  color:rgb(255, 255, 255);
   text-align: center;
 }
 @media screen and (max-width: 728px) {
   .sportsnews-title {
     font-size: 50px;
   }
+}
+
+.sportsnews-date {
+  font-size: 40px;
+  width: 300px;
+  color:rgb(0, 0, 0);
+  text-align: left;
+  margin-top: 50vw;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto ;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }

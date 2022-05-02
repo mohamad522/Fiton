@@ -1,0 +1,83 @@
+.smoothie-bg {
+  background-image: url('../images/smoothie1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 50vw;
+  width: 100%;
+}
+
+.smoothies-title {
+  font-size: 100px;
+  margin: auto;
+  padding-top: 120px;
+  /* padding-top: 2em; */
+  width: 600px;
+  color:rgb(0, 0, 0);
+  text-align: center;
+}
+
+.smoothie-intro-title {
+  font-size: 40px;
+  width: 1300px;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 25vw;
+  padding-bottom: 10px;
+
+}
+
+.smoothie-intro-text {
+  font-size: 20px;
+  width: 1300px;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+
+.smoothie-intro-title2 {
+  font-size: 40px;
+  width: 1300px;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto ;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+
+.flexcontainer {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 320px) {
+  .flexcontainer {
+    display: block;
+  }
+}
+
+.list-items {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.smoothie-img {
+  width: 500px;
+}
+.padding-hr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

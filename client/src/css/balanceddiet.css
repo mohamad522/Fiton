@@ -1,0 +1,50 @@
+.balenced-diet-bg {
+  background-image: url('../images/healthymeals1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 50vw;
+  width: 100%;
+}
+
+.balencedDiet-title {
+  font-size: 80px;
+  margin: auto;
+  padding-top: 160px;
+  width: 600px;
+  color:rgb(0, 0, 0);
+  text-align: center;
+}
+
+.introduction-paragraph {
+  font-size: 25px;
+  width: 1300px;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 34vw;
+
+}
+.list-numbers {
+  font-size: 25px;
+  color:rgb(0, 0, 0);  
+}
+.flexcontainer {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 320px) {
+  .flexcontainer {
+    display: block;
+  }
+}
+
+.padding-hr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.meals-img {
+    width: 600px;
+}
+
+

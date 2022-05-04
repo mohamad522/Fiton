@@ -1,8 +1,8 @@
 import React from 'react'
-import tight from '../images/smoothie1.png'
-import rocktheboat from '../images/smoothie1.png'
-import flamingostand from '../images/smoothie1.png'
-import Banded from '../images/smoothie1.png'
+import tight from '../images/tight.png'
+import rocktheboat from '../images/rocktheboat.png'
+import flamingostand from '../images/flamingostand.png'
+import Banded from '../images/single.png'
 
 const BalanceExercises  = () => {
 

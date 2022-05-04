@@ -27,7 +27,7 @@ const Workouts = () => {
       </div></a>
       <a href='/balance-exercises' style={{textDecoration:'none'}}><div className='WorkoutCategory'
       style={{backgroundImage:`url(${require('../images/home-2-1.jpg')})`}}>
-      <div className='CategoryTitle'>13 Balance Exercises</div>
+      <div className='CategoryTitle'>Balance Exercises</div>
       </div></a>
     </div>
     </>

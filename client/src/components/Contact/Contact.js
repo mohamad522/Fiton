@@ -82,29 +82,9 @@ const Contact = () => {
                style={{borderRadius:'1px'}}>Send</button>
             </div>
           </form>
-
-          
-          <div class="status"></div>
         </div>
       </div>
-
-</section>
-
-    {/* <div>
-      <h1>Contact Us</h1>
-      <form onSubmit={sendMail}> */}
-        {/* <label for="sender_name" style={{fontSize: 18, fontWeight: 500}}>Name</label>
-        <input type="text" name="sender_name" id="sender_name" value={sender_name} onChange={handleName}
-         required placeholder="your name" style={{ backgroundColor: '#ededed', width: 160, borderRadius:'1px'}}/>
-        <br/> */}
-        {/* <input type="email" name="sender_email" value={sender_email} onChange={handleEmail}
-         required placeholder="your email id"/>
-        <br/> */}
-        {/* <textarea name="message" value={message} onChange={handlemessage} required placeholder="your message"/>
-        <br/> */}
-        {/* <button type="submit">Send mail</button> */}
-      {/* </form>
-    </div> */}
+    </section>
     </>
   )
 }

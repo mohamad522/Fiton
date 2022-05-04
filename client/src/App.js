@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import Workouts from './pages/Workouts'
 import HealthyLifestyle from './pages/HealthyLifestyle'
 import SportsNews from './pages/SportsNews'
-import WorkoutPlaylists from './pages/WorkoutPlaylists'
+import TodoPage from './pages/TodoPage'
 import ContactUs from './pages/ContactUs'
 import Signin from './pages/Singin'
 import Signup from './pages/Signup'
@@ -38,7 +38,7 @@ const App = () => {
       <Route path="workouts" element={<Workouts />} />
       <Route path="healthy-lifestyle" element={<HealthyLifestyle />} />
       <Route path="sports-news" element={<SportsNews />} />
-      <Route path="workout-playlists" element={<WorkoutPlaylists />} />
+      <Route path="todo-list" element={<TodoPage />} />
       <Route path="contact-us" element={<ContactUs />} />
       <Route path="signin" element={<Signin />} />
       <Route path="signup" element={<Signup />} />

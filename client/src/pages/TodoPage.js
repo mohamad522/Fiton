@@ -1,9 +1,9 @@
 import React, {useState,useEffect} from 'react';
 import Header from '../components/todo/Header';
-import "../css/workoutplaylists.css";
+import "../css/todolist.css";
 import Form from "../components/todo/Form";
 import TodoList from '../components/todo/TodoList';
-const WorkoutPlaylists = () => {
+const TodoPage = () => {
   const initialState = JSON.parse(localStorage.getItem("todos")) || [];
   const [input, setInput]= useState("");
   const [todos, setTodos]= useState(initialState);// to keep track of the todos items
@@ -42,4 +42,4 @@ const WorkoutPlaylists = () => {
   );
 };
 
-export default WorkoutPlaylists;
+export default TodoPage;

@@ -1,13 +1,12 @@
 import { async } from '@firebase/util';
 import { React, useState, useEffect } from 'react'
 import { db } from './firebase-config';
-import { collection, getDocs, doc } from 'firebase/firestore'
+import { collection, getDocs, doc, getCollections, listCollections } from 'firebase/firestore'
 
 const BodyBuilding = () => {
   const [users, setUsers] = useState([]); //users is the array of workouts so we can reach properties by users.name for example
   const usersCollectionRef = collection(db, "workouts/chest and triceps/2") //name of the collection we want to map through
   const workoutsDocRef = doc(db, "workouts/chest and triceps")
-  // console.log(workoutsDocRef.listCollections())
   // const saveWorkout = async (idn, namen, sets-and-reps, image, explication) => {
 
   // }
@@ -21,6 +20,9 @@ const BodyBuilding = () => {
   }, [])
 
   const save = () => {
+    const collections = workoutsDocRef.listCollections();
+
+    console.log(collections);
     // import { doc, setDoc } from "firebase/firestore"; 
     // // Add a new document in collection "cities"
     // await setDoc(doc(db, "cities", "LA"), {
@@ -61,5 +63,4 @@ const BodyBuilding = () => {
     </>
   )
 }
-
 export default BodyBuilding

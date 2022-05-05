@@ -33,7 +33,7 @@ const BodyBuilding = () => {
     const auth = getAuth();
     const loggedUser = auth.currentUser;
     if (loggedUser !== null) {
-      setDoc(doc(db, "users", loggedUser.email), {data:'data'})
+      setDoc(doc(db, "users", loggedUser.email), {data:'user.name'})
     } else {
       console.log('signed out')
     }

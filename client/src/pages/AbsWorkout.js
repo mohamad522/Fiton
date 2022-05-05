@@ -9,8 +9,8 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const AbsWorkout = () => {
   const [users, setUsers] = useState([]); //users is the array of workouts so we can reach properties by users.name for example
-  const usersCollectionRef = collection(db, "workouts/chest and triceps/chest-collection") //name of the collection we want to map through
-  const workoutsDocRef = doc(db, "workouts/chest and triceps")
+  const usersCollectionRef = collection(db, "workouts/Abs Workout/Abs collection") //name of the collection we want to map through
+  const workoutsDocRef = doc(db, "workouts/Abs Workout")
   // const saveWorkout = async (idn, namen, sets-and-reps, image, explication) => {
 
   // }
@@ -26,10 +26,11 @@ const AbsWorkout = () => {
   
 
   const save = () => {
+
     const auth = getAuth();
     const loggedUser = auth.currentUser;
     if (loggedUser !== null) {
-      setDoc(doc(db, "users", loggedUser.email), {data:'data'})
+      setDoc(doc(db, "users", loggedUser.email), {data:'user.name'})
     } else {
       console.log('signed out')
     }
@@ -46,7 +47,7 @@ const AbsWorkout = () => {
         return (<div>
           {/* user.property returns the property */}
           <WorkoutElements name={user.name} description={user.description}
-           setsAndReps={user['sets and reps']} imageUrl={user.image} save={save}></WorkoutElements>
+           imageUrl={user.image} save={save}></WorkoutElements>
           <br />
         </div>)
       })}

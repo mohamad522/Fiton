@@ -49,7 +49,7 @@ const Contact = () => {
                 <div className="md-form mb-0">
                 <label for="sender_name" style={{fontSize: 18, fontWeight: 500}}>Name</label>
                   <input type="text" id="sender_name" name="sender_name"
-                    className="form-control" placeholder='First' 
+                    className="form-control" placeholder='Name' 
                     style={{ backgroundColor: '#ededed', width: 160, borderRadius:'1px'}}
                     value={sender_name} onChange={handleName} />
                 </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                 <label for="sender_email" style={{fontSize: 18, fontWeight: 500}}>Email</label>
                   <input type="email" id="sender_email" name="sender_email" className="form-control"
                    style={{ backgroundColor: '#ededed', width: 320, borderRadius:'1px'}}
-                   value={sender_email} onChange={handleEmail} />
+                   value={sender_email} onChange={handleEmail} placeholder='Email' />
                 </div>
               </div>
             </div>

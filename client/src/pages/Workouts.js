@@ -14,11 +14,11 @@ const Workouts = () => {
       <div className='CategoryTitle'>Body Building Plan</div>
       </div></a>
       <a href='/abs-workout' style={{textDecoration:'none'}}><div className='WorkoutCategory'
-      style={{backgroundImage:`url(${require('../images/home-2-1.jpg')})`}}>
+      style={{backgroundImage:`url(${require('../images/workoutAbs.jpeg')})`}}>
       <div className='CategoryTitle'>ABS Workout</div>
       </div></a>
       <a href='/fat-loss' style={{textDecoration:'none'}}><div className='WorkoutCategory'
-      style={{backgroundImage:`url(${require('../images/home-2-1.jpg')})`}}>
+      style={{backgroundImage:`url(${require('../images/workoutFatLoss.jpeg')})`}}>
       <div className='CategoryTitle'>Fat Loss</div>
       </div></a>
       <a href='/cardio-exercises' style={{textDecoration:'none'}}><div className='WorkoutCategory'

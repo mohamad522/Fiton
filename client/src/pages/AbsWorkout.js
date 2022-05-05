@@ -3,7 +3,7 @@ import { React, useState, useEffect } from 'react'
 import { db } from './firebase-config';
 import { collection, getDocs, doc, setDoc, addDoc } from 'firebase/firestore'
 import WorkoutElements from '../components/Workout';
-import { WorkoutPageTitle } from '../components/Workout/WorkoutElements';
+import { WorkoutPageTitle, WorkoutButton } from '../components/Workout/WorkoutElements';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
@@ -25,17 +25,6 @@ const AbsWorkout = () => {
 
   
 
-  const save = () => {
-
-    const auth = getAuth();
-    const loggedUser = auth.currentUser;
-    if (loggedUser !== null) {
-      setDoc(doc(db, "users", loggedUser.email), {data:'user.name'})
-    } else {
-      console.log('signed out')
-    }
-  }
-
   return ( //write html inside the return
     // <>: important because all elements inside the return should be wrapped inside a father element
     <> 
@@ -45,9 +34,18 @@ const AbsWorkout = () => {
       {/* map function loops on each element of the array users (like for loop in python) */}
       {users.map((user) => {
         return (<div>
+          <WorkoutButton onClick={() =>{
+            const auth = getAuth();
+            const loggedUser = auth.currentUser;
+            if (loggedUser !== null) {
+              setDoc(collection(db, "users", loggedUser.email), {name: user.name, description:user.description})
+            } else {
+              console.log('signed out')
+            }
+           }}>Save</WorkoutButton>
           {/* user.property returns the property */}
           <WorkoutElements name={user.name} description={user.description}
-           imageUrl={user.image} save={save}></WorkoutElements>
+           imageUrl={user.image}></WorkoutElements>
           <br />
         </div>)
       })}

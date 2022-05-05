@@ -1,0 +1,49 @@
+#body-health{
+  font-family: 'Josefin Sans', sans-serif;
+}
+#banner_size {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+#banner-overlay{
+  
+  position: absolute;
+  top:23%;
+  left:22%;
+  padding-top:8%;
+}
+#banner-text
+{
+  color: white;
+  font-size: 70px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+}
+#body-parag{
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+#points-of-sale ul{       
+  list-style-type:none; 
+  
+}
+#points-of-sale li{
+  float:left;
+  width:33%;
+  
+}
+#points-of-sale li img{
+  width:400px;
+  height :280px;
+  
+}
+
+
+#points-of-sale li h3 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+  padding-bottom: 10px;
+}

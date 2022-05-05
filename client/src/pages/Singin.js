@@ -51,7 +51,7 @@ const Singin = () => {
         setLoginPassword(event.target.value);
         }}/>
       </div>
-      <Link to='/password-recovery' className='forgot-password'>Forgot your password?</Link>
+      <Link to='/contact-us' className='forgot-password'>Forgot your password?</Link>
       <div className='signin-button-div'>
         <button disabled={loading} onClick={login} className="btn btn-primary singin-button">SIGN IN</button>
       </div>

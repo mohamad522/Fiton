@@ -1,6 +1,5 @@
 import { React, useState } from 'react'
 import {FaBars} from 'react-icons/fa'
-// import { auth } from '../../pages/firebase-config';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { 
   Nav, 
@@ -13,6 +12,7 @@ import {
   NavBtn,
   NavBtnLink
 } from './NavbarElements';
+
 
 const Navbar = ({toggle}) => {
   return (

@@ -23,7 +23,7 @@ const Workouts = () => {
       </div></a>
       <a href='/cardio-exercises' style={{textDecoration:'none'}}><div className='WorkoutCategory'
       style={{backgroundImage:`url(${require('../images/home-2-1.jpg')})`}}>
-      <div className='CategoryTitle'>20 Cardio Exercises</div>
+      <div className='CategoryTitle'>Cardio Exercises</div>
       </div></a>
       <a href='/balance-exercises' style={{textDecoration:'none'}}><div className='WorkoutCategory'
       style={{backgroundImage:`url(${require('../images/home-2-1.jpg')})`}}>

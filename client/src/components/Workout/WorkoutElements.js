@@ -30,7 +30,7 @@ export const SingleWorkoutContainer = styled.div`
   }
 `
 export const DescriptionContainer = styled.div`
-
+  background-color: aliceblue;
 `
 export const WorkoutPageTitle = styled.p`
   font-size: 70px;

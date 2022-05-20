@@ -12,12 +12,12 @@ import Signin from './pages/Singin'
 import Signup from './pages/Signup'
 import PassRecovery from './pages/PassRecovery'
 import EditProfile from './pages/EditProfile'
-import Favorites from './pages/Favorites'
+import Saved from './pages/Saved'
 import SmoothieRecipes from './pages/SmoothieRecipes'
 import NutritiousBreakfast from './pages/NutritiousBreakfast'
 import BalancedDiet from './pages/BalancedDiet'
 import JointsHarming from './pages/JointsHarming'
-import Streching from './pages/Streching'
+import Stretching from './pages/Stretching'
 import Hiit from './pages/Hiit'
 import WorkoutSongs from './pages/WorkoutSongs'
 import ChildrenInSports from './pages/ChildrenInSports'
@@ -44,12 +44,12 @@ const App = () => {
       <Route path="signup" element={<Signup />} />
       <Route path="password-recovery" element={<PassRecovery />} />
       <Route path="edit-profile" element={<EditProfile />} />
-      <Route path="favorites" element={<Favorites />} />
+      <Route path="saved" element={<Saved />} />
       <Route path="smoothie-recipes" element={<SmoothieRecipes/>} />
       <Route path="nutritious-breakfast" element={<NutritiousBreakfast />} />
       <Route path="balanced-diet" element={<BalancedDiet />} />
       <Route path="joints-harming" element={<JointsHarming />} />
-      <Route path="streching" element={<Streching />} />
+      <Route path="stretching" element={<Stretching />} />
       <Route path="hiit" element={<Hiit />} />
       <Route path="workout-songs" element={<WorkoutSongs />} />
       <Route path="children-in-sports" element={<ChildrenInSports />} />

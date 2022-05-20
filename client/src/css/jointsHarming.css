@@ -1,0 +1,38 @@
+.jointharming-bg {
+  background-image: url('../images/jointsHarming7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 50vw;
+  width: 100%;
+}
+
+.jh-title {
+  font-size: 80px;
+  margin: auto;
+  padding-top: 180px;
+  /* padding-top: 2em; */
+  width: 900px;
+  color:rgb(0, 0, 0);
+  text-align: center;
+}
+
+.mistakes-block {
+  margin-top: 25vw;
+  padding-bottom: 10px;
+
+}
+
+.flexcontainer {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 320px) {
+  .flexcontainer {
+    display: block;
+  }
+}
+
+.size-img {
+  width: 600px;
+}

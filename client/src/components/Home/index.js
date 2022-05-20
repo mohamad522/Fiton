@@ -46,8 +46,8 @@ const HomeElements = () => {
           <Picturetitle>5 EXERCICE MISTAKES HARMING YOUR JOINTS</Picturetitle>
         </PictureAndTitle>
         <PictureAndTitle>
-          <a href='streching'><Picture src={home32} alt={'STRECHING EVERYDAY​'} /></a>
-          <Picturetitle>HOW TO START STRECHING EVERYDAY​</Picturetitle>
+          <a href='stretching'><Picture src={home32} alt={'STRECHING EVERYDAY​'} /></a>
+          <Picturetitle>HOW TO START STRETCHING EVERYDAY​</Picturetitle>
         </PictureAndTitle>
         <PictureAndTitle>
           <a href='hiit'><Picture src={home33} alt={'2O MINUTES HIIT WORKOUT'} /></a>
@@ -59,7 +59,7 @@ const HomeElements = () => {
       <Categorytitle>CARDIO</Categorytitle>
       <PicturesCategory>
         <PictureAndTitle>
-          <a href='workout-songs'><Picture src={home41} alt={'SMOOTHIE RECIPES'} /></a>
+          <a href='burn-fats-treadmill'><Picture src={home41} alt={'SMOOTHIE RECIPES'} /></a>
           <Picturetitle>HOW TO EASILY BURN MORE FATS IN THE TREADMILL</Picturetitle>
         </PictureAndTitle>
         <PictureAndTitle>
@@ -67,7 +67,7 @@ const HomeElements = () => {
           <Picturetitle>HOW TO INVOLVE CHILDREN IN SPORTS</Picturetitle>
         </PictureAndTitle>
         <PictureAndTitle>
-          <a href='burn-fats-treadmill'><Picture src={home43} alt={'BALANCED DIET'} /></a>
+          <a href='workout-songs'><Picture src={home43} alt={'BALANCED DIET'} /></a>
           <Picturetitle>SONGS FOR YOUR WORKOUT PLAYLIST</Picturetitle>
         </PictureAndTitle>
       </PicturesCategory>

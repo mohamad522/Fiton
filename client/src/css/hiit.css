@@ -1,0 +1,31 @@
+
+.hiit-div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+.list-numbers {
+  font-size: 25px;
+  color:rgb(0, 0, 0);  
+}
+.hiit-flexcontainer {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 320px) {
+  .hiit-flexcontainer {
+    display: block;
+  }
+}
+
+.padding-hr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.workout-img {
+    width: 600px;
+}
+
+

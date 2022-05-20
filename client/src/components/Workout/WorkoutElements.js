@@ -20,6 +20,9 @@ export const WorkoutButton = styled.button`
   font-size: 20px;
   padding: 10px 15px;
   text-decoration: none;
+  :hover{
+    background: #9F80AA;
+  }
 `
 export const SingleWorkoutContainer = styled.div`
   display: flex;

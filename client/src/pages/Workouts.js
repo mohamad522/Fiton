@@ -10,7 +10,7 @@ const Workouts = () => {
     <div className='c2d2'></div>
     <div className='GridContainer'>
       <a href='/body-building-plan' style={{textDecoration:'none'}}><div className='WorkoutCategory'
-      style={{backgroundImage:`url(${require('../images/home-2-2.jpg')})`}}>
+      style={{backgroundImage:`url(${require('../images/bodybuilding.jpg')})`}}>
       <div className='CategoryTitle'>Body Building Plan</div>
       </div></a>
       <a href='/abs-workout' style={{textDecoration:'none'}}><div className='WorkoutCategory'
@@ -22,11 +22,11 @@ const Workouts = () => {
       <div className='CategoryTitle'>Fat Loss</div>
       </div></a>
       <a href='/cardio-exercises' style={{textDecoration:'none'}}><div className='WorkoutCategory'
-      style={{backgroundImage:`url(${require('../images/home-2-1.jpg')})`}}>
+      style={{backgroundImage:`url(${require('../images/cardio.jpg')})`}}>
       <div className='CategoryTitle'>Cardio Exercises</div>
       </div></a>
       <a href='/balance-exercises' style={{textDecoration:'none'}}><div className='WorkoutCategory'
-      style={{backgroundImage:`url(${require('../images/home-2-1.jpg')})`}}>
+      style={{backgroundImage:`url(${require('../images/balance.jpg')})`}}>
       <div className='CategoryTitle'>Balance Exercises</div>
       </div></a>
     </div>

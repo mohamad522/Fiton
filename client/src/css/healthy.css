@@ -25,23 +25,23 @@
   text-align: center;
   font-weight: bold;
 }
-#points-of-sale ul{       
+#points-of-sale .h-ul{       
   list-style-type:none; 
   
 }
-#points-of-sale li{
+#points-of-sale .h-li{
   float:left;
   width:33%;
   
 }
-#points-of-sale li img{
+#points-of-sale .h-li .h-img{
   width:400px;
   height :280px;
   
 }
 
 
-#points-of-sale li h3 {
+#points-of-sale .h-li .h-h3 {
   text-align: center;
   font-size: 25px;
   font-weight: normal;

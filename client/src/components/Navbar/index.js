@@ -1,6 +1,5 @@
-import { React, useState } from 'react'
+import { React } from 'react'
 import {FaBars} from 'react-icons/fa'
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { 
   Nav, 
   NavbarContainer, 

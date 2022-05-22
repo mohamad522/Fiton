@@ -1,6 +1,7 @@
-import {React, createContext} from 'react'
-import { Route, Routes, Outlet, Link, Switch,
-   BrowserRouter as Router, Navigate} from 'react-router-dom'
+import {React} from 'react'
+import { Route, Routes, Link } from 'react-router-dom'
+import { getAuth } from "firebase/auth";
+import { auth } from './pages/firebase-config'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
 import Workouts from './pages/Workouts'
@@ -13,6 +14,7 @@ import Signup from './pages/Signup'
 import PassRecovery from './pages/PassRecovery'
 import EditProfile from './pages/EditProfile'
 import Saved from './pages/Saved'
+import SavedNoUser from './pages/SavedNoUser';
 import SmoothieRecipes from './pages/SmoothieRecipes'
 import NutritiousBreakfast from './pages/NutritiousBreakfast'
 import BalancedDiet from './pages/BalancedDiet'
@@ -27,10 +29,15 @@ import AbsWorkout from './pages/AbsWorkout'
 import FatLoss from './pages/FatLoss'
 import CardioExercises from './pages/CardioExercises'
 import BalanceExercises from './pages/BalanceExercises'
+import F from './pages/F';
+import Breakfast from './pages/Breakfast';
+import MealP from './pages/MealP';
 
 
 const App = () => {
-
+  // const auth = getAuth();
+  // const loggedUser = auth.currentUser;
+  console.log('app.js: ',auth.email)
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -44,7 +51,7 @@ const App = () => {
       <Route path="signup" element={<Signup />} />
       <Route path="password-recovery" element={<PassRecovery />} />
       <Route path="edit-profile" element={<EditProfile />} />
-      <Route path="saved" element={<Saved />} />
+      <Route path="saved" element={false? <Saved />: <SavedNoUser />} />
       <Route path="smoothie-recipes" element={<SmoothieRecipes/>} />
       <Route path="nutritious-breakfast" element={<NutritiousBreakfast />} />
       <Route path="balanced-diet" element={<BalancedDiet />} />
@@ -58,12 +65,16 @@ const App = () => {
       <Route path="abs-workout" element={<AbsWorkout />} />          
       <Route path="fat-loss" element={<FatLoss />} />          
       <Route path="cardio-exercises" element={<CardioExercises />} />          
-      <Route path="balance-exercises" element={<BalanceExercises />} />     
+      <Route path="balance-exercises" element={<BalanceExercises />} />  
+      <Route path="meal" element={<MealP />} />     
+      <Route path="breakfast" element={<Breakfast />} />     
+      <Route path="f" element={<F />} />     
+   
        {/* Using path="*"" means "match anything", so this route
              acts like a catch-all for URLs that we don't have explicit
              routes for. */}
-       <Route path="*" element={<NoMatch />} />
-       </Route>
+      <Route path="*" element={<NoMatch />} />
+      </Route>
      </Routes>
   )
 }
@@ -79,4 +90,3 @@ function NoMatch() {
   );
 }
 export default App
-// hello from workouts branch

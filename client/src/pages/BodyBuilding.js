@@ -1,4 +1,3 @@
-import { async, stringify } from '@firebase/util';
 import { React, useState, useEffect } from 'react'
 import { db } from './firebase-config';
 import { collection, getDocs, doc, setDoc } from 'firebase/firestore'
@@ -11,9 +10,6 @@ const BodyBuilding = () => {
   const [workouts, setWorkouts] = useState([]); //users is the array of workouts so we can reach properties by users.name for example
   const workoutsCollectionRef = collection(db, "workouts/chest and triceps/chest-collection") //name of the collection we want to map through
   const workoutsDocRef = doc(db, "workouts/chest and triceps")
-  // const saveWorkout = async (idn, namen, sets-and-reps, image, explication) => {
-
-  // }
   useEffect(() => {
     const getWorkouts = async () => {
       const data = await getDocs(workoutsCollectionRef) //returns all documents from a specific collection

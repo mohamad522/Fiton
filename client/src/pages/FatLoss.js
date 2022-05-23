@@ -33,7 +33,7 @@ const BodyBuilding = () => {
       {/* map function loops on each element of the array users (like for loop in python) */}
       {users.map((user) => {
         return (<div>
-          <WorkoutButton onClick={() =>{
+          <WorkoutButton style={{margin:'0 0 10px 20px'}} onClick={() =>{
             const auth = getAuth();
             const loggedUser = auth.currentUser;
             if (loggedUser !== null) {

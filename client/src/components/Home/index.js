@@ -46,7 +46,8 @@ const HomeElements = () => {
           <Picturetitle>5 EXERCICE MISTAKES HARMING YOUR JOINTS</Picturetitle>
         </PictureAndTitle>
         <PictureAndTitle>
-          <a href='stretching'><Picture src={home32} alt={'STRECHING EVERYDAY​'} /></a>
+          <a href='https://www.self.com/gallery/essential-stretches-slideshow' target={'_blank'}>
+            <Picture src={home32} alt={'STRECHING EVERYDAY​'} /></a>
           <Picturetitle>HOW TO START STRETCHING EVERYDAY​</Picturetitle>
         </PictureAndTitle>
         <PictureAndTitle>
@@ -59,15 +60,18 @@ const HomeElements = () => {
       <Categorytitle>CARDIO</Categorytitle>
       <PicturesCategory>
         <PictureAndTitle>
-          <a href='burn-fats-treadmill'><Picture src={home41} alt={'SMOOTHIE RECIPES'} /></a>
+          <a href='https://www.healthline.com/health/treadmill-weight-loss' target={'_blank'}>
+            <Picture src={home41} alt={'SMOOTHIE RECIPES'} /></a>
           <Picturetitle>HOW TO EASILY BURN MORE FATS IN THE TREADMILL</Picturetitle>
         </PictureAndTitle>
         <PictureAndTitle>
-          <a href='children-in-sports'><Picture src={home42} alt={'NUTRITIOUS BREAKFAST'} /></a>
+          <a href='https://www.aacap.org/AACAP/Families_and_Youth/Facts_for_Families/FFF-Guide/Children-And-Sports-061.aspx' target={'_blank'}>
+            <Picture src={home42} alt={'NUTRITIOUS BREAKFAST'} /></a>
           <Picturetitle>HOW TO INVOLVE CHILDREN IN SPORTS</Picturetitle>
         </PictureAndTitle>
         <PictureAndTitle>
-          <a href='workout-songs'><Picture src={home43} alt={'BALANCED DIET'} /></a>
+          <a href='https://www.youtube.com/watch?v=kf0Af6A5wW8' target={'_blank'}>
+            <Picture src={home43} alt={'BALANCED DIET'} /></a>
           <Picturetitle>SONGS FOR YOUR WORKOUT PLAYLIST</Picturetitle>
         </PictureAndTitle>
       </PicturesCategory>

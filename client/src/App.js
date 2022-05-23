@@ -1,7 +1,8 @@
 import {React} from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
 import { getAuth } from "firebase/auth";
-import { auth } from './pages/firebase-config'
+import { auth, db } from './pages/firebase-config'
+import { doc, collection, getDocs } from 'firebase/firestore';
 import Layout from './pages/Layout'
 import Home from './pages/Home'
 import Workouts from './pages/Workouts'
@@ -18,11 +19,7 @@ import SmoothieRecipes from './pages/SmoothieRecipes'
 import NutritiousBreakfast from './pages/NutritiousBreakfast'
 import BalancedDiet from './pages/BalancedDiet'
 import JointsHarming from './pages/JointsHarming'
-import Stretching from './pages/Stretching'
 import Hiit from './pages/Hiit'
-import WorkoutSongs from './pages/WorkoutSongs'
-import ChildrenInSports from './pages/ChildrenInSports'
-import BurnFatsTreadmill from './pages/BurnFatsTreadmill'
 import BodyBuilding from './pages/BodyBuilding'
 import AbsWorkout from './pages/AbsWorkout'
 import FatLoss from './pages/FatLoss'
@@ -32,11 +29,10 @@ import F from './pages/F';
 import Breakfast from './pages/Breakfast';
 import MealP from './pages/MealP';
 
-
 const App = () => {
   // const auth = getAuth();
   // const loggedUser = auth.currentUser;
-  console.log('app.js: ',auth.email)
+  console.log('app.js: ', getDocs(collection(db, 'workouts')).docs)
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -54,11 +50,7 @@ const App = () => {
       <Route path="nutritious-breakfast" element={<NutritiousBreakfast />} />
       <Route path="balanced-diet" element={<BalancedDiet />} />
       <Route path="joints-harming" element={<JointsHarming />} />
-      <Route path="stretching" element={<Stretching />} />
       <Route path="hiit" element={<Hiit />} />
-      <Route path="workout-songs" element={<WorkoutSongs />} />
-      <Route path="children-in-sports" element={<ChildrenInSports />} />
-      <Route path="burn-fats-treadmill" element={<BurnFatsTreadmill />} />          
       <Route path="body-building-plan" element={<BodyBuilding />} />          
       <Route path="abs-workout" element={<AbsWorkout />} />          
       <Route path="fat-loss" element={<FatLoss />} />          

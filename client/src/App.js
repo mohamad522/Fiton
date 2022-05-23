@@ -12,7 +12,6 @@ import ContactUs from './pages/ContactUs'
 import Signin from './pages/Singin'
 import Signup from './pages/Signup'
 import PassRecovery from './pages/PassRecovery'
-import EditProfile from './pages/EditProfile'
 import Saved from './pages/Saved'
 import SavedNoUser from './pages/SavedNoUser';
 import SmoothieRecipes from './pages/SmoothieRecipes'
@@ -50,7 +49,6 @@ const App = () => {
       <Route path="signin" element={<Signin />} />
       <Route path="signup" element={<Signup />} />
       <Route path="password-recovery" element={<PassRecovery />} />
-      <Route path="edit-profile" element={<EditProfile />} />
       <Route path="saved" element={false? <Saved />: <SavedNoUser />} />
       <Route path="smoothie-recipes" element={<SmoothieRecipes/>} />
       <Route path="nutritious-breakfast" element={<NutritiousBreakfast />} />

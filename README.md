@@ -29,5 +29,5 @@ is made with JavaScript. The messages from contact us page are sent to our email
 1) Download the zip folder on the home page of the repository
 2) Extract files to a desired folder
 3) Open the folder in your vscode editor
-4) Open your terminal at the directory '.../client' and type 'npm install node-modules'(you are supposed to have node.js installed on your machine)
+4) Open your terminal at the directory '.../client' and type 'npm install node-modules emailjs uuid'(you are supposed to have node.js installed on your machine)
 5) type 'npm start' and this will run the website automatically(if the you don't see the website go type 'localhost:3000' in your browser address bar)
